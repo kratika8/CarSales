@@ -1,0 +1,127 @@
+{% include 'header.html' %}
+		<div class="wrapper tableboxseach">
+			<div id="cover">
+				<form method = "POST" action = "/searchdata/">
+					{%csrf_token%}
+    					<div class="tb">
+	    					<div class="td"><input type ="text" name = "srh" placeholder="Enter Customer ID or Sales ID "></div>
+	    					<div class="td" id="s-cover">
+	    					<button type="submit" class = "searchbutton">
+	    						<div id="s-circle"></div>
+	          					<span></span>
+	          				</button>
+	          				</div>
+          				</div>
+				</form>
+			</div>
+			<div>
+				{% if messages %}
+					<ul>
+						{% for k in messages %}
+						<li>
+							{{ k }}
+						</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</div> 
+		{%  if sr %}
+
+			<p class="selectRow">Select Number Of Rows</p>
+				<div class="form-group selectBox"> 	<!--		Show Numbers Of Rows 		-->
+			 		<select class  ="form-control" name="state" id="maxRows">
+						 <option value="5000">Show ALL Rows</option>
+						 <option value="5">5</option>
+						 <option value="10">10</option>
+						 <option value="15">15</option>
+						 <option value="20">20</option>
+						 <option value="50">50</option>
+						 <option value="70">70</option>
+						 <option value="100">100</option>
+						</select>
+			 		
+			  	</div>
+
+		
+			<div class="table-responsive">
+						<table class="table table-hover" id = "dtBasicExample">
+							<col style="width:5%">
+							<col style="width:10%">
+							<col style="width:5%">
+							<col style="width:5%">
+							<col style="width:5%">
+							<col style="width:5%">
+							<col style="width:5%">
+							<col style="width:5%">
+							<col style="width:5%">
+							<col style="width:5%">
+							<col style="width:5%">
+							<col style="width:5%">
+							<col style="width:10%">
+							<col style="width:10%">
+							<col style="width:5%">
+							<thead>
+								<tr>
+								   <th>Sales Id</th>
+								   <th>Date of Purchase</th>
+								   <th>Customer</th>
+								   <th>Fuel</th>
+								   <th>Vehicle Segment</th>
+								   <th>Selling Price</th>
+								   <th>Power Steering</th>
+								   <th>Airbags</th>
+								   <th>Sunroof</th>
+								   <th>Matt Finish</th>
+								   <th>Music system</th>
+								   <th>Customer Income Group</th>
+								   <th>Customer Region</th>
+								   <th>Marital status</th>
+		 						</tr>
+							</thead>
+									{% for k in sr %}
+									<tr>
+										<td>{{ k.sales_id }}</td>
+										<td>{{ k.pub_date }}</td>
+										<td>{{ k.Customer_id }}</td>
+										<td>{{ k.Fuel }}</td>
+										<td>{{ k.VEHICLE_SEGMENT }}</td>
+										<td>{{ k.SellingPrice }}</td>
+										<td>{{ k.Power_steering }}</td>
+										<td>{{ k.airbags }}</td>
+										<td>{{ k.sunroof }}</td>
+										<td>{{ k.Matt_finish }}</td>
+										<td>{{ k.music_system }}</td>
+										<td>{{ k.Customer_Incomegroup }}</td>
+										<td>{{ k.Customer_Region }}</td>
+										<td>{{ k.Customer_Marital_status }}</td>
+									</tr>
+								{% endfor %}
+						</table>
+
+										<!--		Start Pagination -->
+			<div class='pagination-container' >
+				<nav>
+				  <ul class="pagination">
+            
+            <li data-page="prev" >
+								     <span class="pager"> < <span class="sr-only">(current)</span></span>
+								    </li>
+				   <!--	Here the JS Function Will Add the Rows -->
+        <li data-page="next" id="prev">
+								       <span class="pager"> > <span class="sr-only">(current)</span></span>
+								    </li>
+				  </ul>
+				</nav>
+			</div>
+			<!--		End Pagination -->
+			</div>
+			{% endif %}
+		</div>
+
+<script>
+    if(document.location.href.indexOf('searchdata') > -1) { 
+        // indexOf will return the position of the first occurence of this string in the url
+        // or -1 it it's not there.
+        document.location.href = 'http://127.0.0.1:8000/';
+    }
+</script>

@@ -1,0 +1,29 @@
+function add(n) {
+  if (n == 1)
+  {
+  return 1;
+  }
+  else{
+   return n + add(n - 1);
+}
+}
+console.log(add(5));
+1 chaining in js
+2 event bubbling
+3 == compares values
+4 === comparres values and types 
+5 scope chain
+7 event categoring 
+6 event chaining
+7 method 
+8 promise 
+9 iffee
+10 closure 
+11 let and const 
+
+var a=10;
+for(var i=0;i<10;i++)
+{
+	var a=20;
+}
+console.log(a);

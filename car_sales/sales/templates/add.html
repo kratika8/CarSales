@@ -12,7 +12,7 @@
                         </div>
                         <div class="col">
                         <label for="Date Of Purchase" style="color:wheat;">Date Of Purchase</label>
-                        <input type="text" class="form-control inputadd"  name = "pub_date"  placeholder="Enter Date Of Purchase" required="true">
+                        <input type="text" class="form-control inputadd"  name = "pub_date"  placeholder="Enter date in YYYY-MM-DD" required="true">
                         </div>
                     </div>
                      <div class="row line2">
@@ -32,7 +32,7 @@
                         </div>
                         <div class="col">
                         <label for="SellingPrice" style="color:wheat;">SellingPrice</label>
-                        <input type="text" class="form-control inputadd"  name = "SellingPrice"  placeholder="Enter SellingPrice" required="true">
+                        <input type="text" class="form-control inputadd"  name = "SellingPrice"  placeholder="Selling Price =<1 Million" required="true">
                         </div>
                     </div>
                      <div class="row line4">
@@ -83,7 +83,7 @@
                         </div>
                         <div class="col">
                             <div class="btn-group float-right" role="group" aria-label="Basic example">
-                            <button type="submit" class="btn btn-success">Add</button>
+                            <button type="submit" class="btn btn-success" onclick="myAlert()">Add</button>
                             </div>
                         </div>
                     </div>
@@ -92,4 +92,11 @@
         </div>
     </div>
 </div>
+
+<script>
+function myALert() {
+  alert("Hello! your data has been saved");
+}
+</script>
+
     

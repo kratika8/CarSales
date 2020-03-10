@@ -7,3 +7,4 @@ Html5 (Template Designing)
 CSS3 (Presentation to the template)
 Jquery (Pagination)
 
+The Problem Statement : In the modern age of automation and digitalization, the client wants to create a web application with capability to view and edit the Sales of the Enterprise. In order to solve the problem and get an edge over its competitors, the client wants a Multi-Page User Interface to keep track of Sales. 

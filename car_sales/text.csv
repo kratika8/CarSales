@@ -1,3 +1,0 @@
-sales_id, pub_date, Customer_id, Fuel, VEHICLE_SEGMENT, SellingPrice, Power_steering, airbags, sunroof, Matt_finish, music system, Customer_Gender, Customer_Income group, Customer_Region, Customer_Marital_status
-12346, 2018-04-01, 401, CNG, A, 1272, 1, 0, 0, 0, 1, Male, $25-$70K, South, 0
-

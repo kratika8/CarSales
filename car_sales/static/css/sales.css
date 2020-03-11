@@ -437,7 +437,13 @@
 
 
 
-
+@media screen and (min-width: 1400px) {
+    .tablebox, .tableboxseach, .headerContainer{
+        margin: 0 auto;
+         width :1400px;
+         max-width: 1400px;
+     }
+    }
 .line2, .line3, .line4, .line5, .line6, .line7, .line8{
     margin-top: 10px;
 }
@@ -476,13 +482,6 @@ label {
     font-size:16px;
     color:wheat;
 }
-
-    .tablebox, .tableboxseach, .headerContainer{
-        margin: 0 auto;
-         width :1400px;
-         max-width: 1400px;
-
-    }
    #cover {
     left: 0;
     right: 0;

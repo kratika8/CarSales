@@ -1,102 +1,18 @@
 {% include 'header.html' %}
-<div class="textwrapper addTextWrapper"> 
-    <div class="blurred-box">
-        <div class="container user-login-box">
-            <h1 class="head">Add the details here</h1>
-                <form method = "POST" action = "/submitadd/" class="was-validated">
-                    {%csrf_token%}
-                    <div class="row line1">
-                        <div class="col">
-                        <label for="sales_id" style="color:wheat;">Sales Id</label>
-                        <input type="text" class="form-control inputadd" name = "sales_id" placeholder="Enter sales id" required="true">
-                        </div>
-                        <div class="col">
-                        <label for="Date Of Purchase" style="color:wheat;">Date Of Purchase</label>
-                        <input type="text" class="form-control inputadd"  name = "pub_date"  placeholder="Enter date in YYYY-MM-DD" required="true">
-                        </div>
-                    </div>
-                     <div class="row line2">
-                        <div class="col">
-                        <label for="Customer_id" style="color:wheat;">Customer Id</label>
-                        <input type="text" class="form-control inputadd"  name = "Customer_id"  placeholder="Enter Customer_id" required="true">
-                        </div>
-                        <div class="col">
-                        <label for="Fuel" style="color:wheat;">Fuel</label>
-                        <input type="text" class="form-control inputadd"  name = "Fuel"  placeholder="Enter Fuel" required="true">
-                        </div>
-                    </div>
-                     <div class="row line3">
-                        <div class="col">
-                        <label for="VEHICLE_SEGMENT" style="color:wheat;">Vehicle Segment</label>
-                        <input type="text" class="form-control inputadd"  name = "VEHICLE_SEGMENT"  placeholder="Enter VEHICLE_SEGMENT" required="true">
-                        </div>
-                        <div class="col">
-                        <label for="SellingPrice" style="color:wheat;">SellingPrice</label>
-                        <input type="text" class="form-control inputadd"  name = "SellingPrice"  placeholder="Selling Price =<1 Million" required="true">
-                        </div>
-                    </div>
-                     <div class="row line4">
-                        <div class="col">
-                        <label for="Power_steering" style="color:wheat;">Power Steering</label>
-                        <input type="text" class="form-control inputadd"  name = "Power_steering"  placeholder="Enter Power_steering"
-                        required="true">
-                        </div>
-                        <div class="col"> 
-                        <label for="airbags" style="color:wheat;">Airbags</label>
-                        <input type="text" class="form-control inputadd"  name = "airbags"   placeholder="Enter airbags" required="true">
-                        </div>
-                    </div>
-                     <div class="row line5">
-                        <div class="col">
-                        <label for="sunroof" style="color:wheat;">Sunroof</label>
-                        <input type="text" class="form-control inputadd"  name = "sunroof"  placeholder="Enter sunroof" required="true">
-                        </div>
-                        <div class="col">
-                        <label for="Matt_finish" style="color:wheat;">Matt Finish</label>
-                        <input type="text" class="form-control inputadd" name = "Matt_finish"  placeholder="Enter Matt finish" required="true">
-                        </div>
-                    </div>
-                     <div class="row line6">
-                        <div class="col">
-                        <label for="music_system" style="color:wheat;">Music System</label>
-                        <input type="text" class="form-control inputadd"  name = "music_system"  placeholder="Enter music system" required="true">
-                        </div>
-                        <div class="col">
-                        <label for="Customer_Gender" style="color:wheat;">Customer Gender</label>
-                        <input type="text" class="form-control inputadd"  name = "Customer_Gender"  placeholder="Enter Customer Gender" required="true">
-                        </div>
-                    </div>
-                     <div class="row line7">
-                        <div class="col">
-                        <label for="Customer_Incomegroup" style="color:wheat;">Customer Income Group</label>
-                        <input type="text" class="form-control inputadd"  name = "Customer_Incomegroup"  placeholder="Enter Customer Incomegroup" required="true">
-                        </div>
-                        <div class="col">
-                        <label for="Customer_Region" style="color:wheat;">Customer Region</label>
-                        <input type="text" class="form-control inputadd" name = "Customer_Region" placeholder="Enter CustomerRegion" required="true">
-                        </div>
-                    </div>
-                     <div class="row line8">
-                        <div class="col-6">
-                        <label for="Customer_Marital_status" style="color:wheat;">Customer Marital status</label>
-                        <input type="text" class="form-control inputadd" name = "Customer_Marital_status" placeholder="Enter Customer Marital status" required="true">
-                        </div>
-                        <div class="col">
-                            <div class="btn-group float-right" role="group" aria-label="Basic example">
-                            <button type="submit" class="btn btn-success" onclick="myAlert()">Add</button>
-                            </div>
-                        </div>
-                    </div>
-                        
-                </form>
+<div class = "container" style = "margin-top: 140px; margin-left: 250px;">
+     <h1 class="headUpload">Add Details</h1>
+
+<form method="POST" enctype="multipart/form-data">
+
+    <!-- Security token -->
+    {% csrf_token %}
+
+    <!-- Using the formset -->
+    {{ form.as_p }}
+
+    <div class = "row" style = "margin-top: 80px">
+        <button type="" class="btn btn-dark">ADD</button>
         </div>
-    </div>
+
+</form>
 </div>
-
-<script>
-function myALert() {
-  alert("Hello! your data has been saved");
-}
-</script>
-
-    

@@ -438,23 +438,23 @@
 
 
 
-.line1, .line2, .line3, .line4, .line5, .line6, .line7, .line8{
-	margin-top: 10px;
+.line2, .line3, .line4, .line5, .line6, .line7, .line8{
+    margin-top: 10px;
 }
 
-.head{
-	font-family: display-egyptian-thin, sans-serif;
+.head {
+    font-family: display-egyptian-thin, sans-serif;
     font-weight: bolder;
-    font-size: 3rem; 
-} 
+    color: white;
+}
 body{
- background-image:url(/static/images/genpact.jpg);
- width: 100%;
- height: 100%;
- font-family: Arial, Helvetica;
- letter-spacing: 0.02em;
-  font-weight: 400;
- -webkit-font-smoothing: antialiased; 
+    background: linear-gradient(rgba(28,32,45,0.9), rgba(28,32,45,0.09)),url(/static/images/vinove.jpg);
+    font-family: Arial, Helvetica;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    background-repeat: no-repeat;
+
 }
 .blurred-box{
   position: relative;
@@ -467,33 +467,13 @@ body{
     overflow: hidden;
 }
 
-.blurred-box:after{
-     content: '';
-    width: 1115px;
-    height: 788px;
-    background: inherit;
-    position: absolute;
-    left: 180px;
-    left position: ;
-    right: 0;
-    top: -25px;
-    top position: ;
-    bottom: 0;
-    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
-    filter: blur(46px);
-}
 label {
     display: inline-block;
     margin-bottom: 0rem;
     font-family:display-sans-semibold, sans-serif;
     font-size:16px;
+    color:wheat;
 }
-    .tablebox, .tableboxseach{
-        margin: 0 auto;
-         width :1400px;
-         max-width: 1400px;
-
-    }
    #cover {
     left: 0;
     right: 0;
@@ -517,182 +497,16 @@ label {
     vertical-align: middle;
 }
 
-    #s-cover
-{
-    width: 1px;
-    padding-left: 35px;
-}
-
-.searchbutton
-{
-    position: relative;
-    display: block;
-    width: 84px;
-    height: 96px;
-    cursor: pointer;
-}
-
-#s-circle
-{
-    position: relative;
-    top: -8px;
-    left: 0;
-    width: 43px;
-    height: 43px;
-    margin-top: 0;
-    border-width: 15px;
-    border: 15px solid #fff;
-    background-color: transparent;
-    border-radius: 50%;
-    transition: 0.5s ease all;
-}
-
-.searchbutton span
-{
-    position: absolute;
-    top: 68px;
-    left: 43px;
-    display: block;
-    width: 45px;
-    height: 15px;
-    background-color: transparent;
-    border-radius: 10px;
-    transform: rotateZ(52deg);
-    transition: 0.5s ease all;
-}
-
-.searchbutton span:before, .searchbutton span:after
-{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 45px;
-    height: 15px;
-    background-color: #fff;
-    border-radius: 10px;
-    transform: rotateZ(0);
-    transition: 0.5s ease all;
-}
-
-#s-cover:hover #s-circle
-{
-    top: -1px;
-    width: 67px;
-    height: 15px;
-    border-width: 0;
-    background-color: #fff;
-    border-radius: 20px;
-}
-
-#s-cover:hover span
-{
-    top: 50%;
-    left: 56px;
-    width: 25px;
-    margin-top: -9px;
-    transform: rotateZ(0);
-}
-
-#s-cover:hover button span:before
-{
-    bottom: 11px;
-    transform: rotateZ(52deg);
-}
-
-#s-cover:hover button span:after
-{
-    bottom: -11px;
-    transform: rotateZ(-52deg);
-}
-#s-cover:hover button span:before, #s-cover:hover button span:after
-{
-    right: -6px;
-    width: 40px;
-    background-color: #fff;
-}
-.tableboxseach input[type="text"]
-{
-    width: 100%;
-    height: 96px;
-    font-size: 60px;
-    line-height: 1;
-}
-
-.tableboxseach input[type="text"]::placeholder
-{
-    color: #e16868;
-}
-.tableboxseach input, .tableboxseach button
-{
-    color: #fff;
-    font-family: Nunito;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    background-color: transparent;
-}
-.logo{
-  width: 130px;
-  border-radius: 15px;
-}
-.video-hero__video {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    width: 100vw;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: center;
-    object-position: center;
-    height: 100%;
-    min-width: 100vw;
-    z-index: -1;
-}
+   
 #navbarResponsive a{
-    color : white;
+    color : #01a2c1;
     font-weight : bolder;
 }
-#navbarResponsive a:hover{
-    color:#ee000e;
+#navbarResponsive a:hover, #navbarResponsive a:active{
+    color:white;
 }
-.car_head, .lead{
-    color : #ee000e;
-    font-weight : bolder;
-}
-.car_head{
-    font-size:56px;
-}
-.why_genpact, .genpact{
-    color:#ee000e;
-}
-.pager{
-    display: block;
-    width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    display: block;
-    width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+.hometext{
+    padding:12% 0% 22% 0%;
+
 }

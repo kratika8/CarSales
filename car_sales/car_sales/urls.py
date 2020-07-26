@@ -24,10 +24,10 @@ from sales.api import *
 
 urlpatterns = [
 	url(r'^', include('sales.urls')),
-	url(r'^searchdata/$', searchposts),
-	url(r'^submitadd/$', submitadd),
-    url(r'^savesCars/$', savesCars),
-	# url(r'^<sales_id>/update_view/$', update_view),
+	# url(r'^searchdata/$', searchposts),
+	# url(r'^submitadd/$', submitadd),
+    # url(r'^savesCars/$', savesCars),
+	# # url(r'^<sales_id>/update_view/$', update_view),
     path('admin/', admin.site.urls),
 ]
 

@@ -5,13 +5,13 @@ app_name = 'sales'
 
 urlpatterns = [
     path('', views.index, name='site_index'),
-    path('upload', views.car_upload, name='Cars'),
-    path('fetchdata', views.fetch, name='datafetch'),
-    path(r'^searchdata/$', views.searchposts, name='searchlist'),
-    path('add', views.addData, name='add'),
-    path('submitadd', views.submitadd, name='submitadd'),
-    path('savesCars', api.savesCars, name='savesCars'),
-
-    # path('<sales_id>/update_view', views.update_view, name='update_view' ), 
+    path('add', views.create_view, name='site_index'),
+    path('register', views.register, name='site_index'),
+    path('login', views.login, name='login'),
+    path('logout', views.logout, name='logout'),
+    path('list', views.list_view, name='Cars'),
+    path('particular/<id>', views.detail_view, name='particular'),
+    path('update/<id>', views.update_view, name='particular'),
+    path('delete/<id>', views.delete_view, name='delete'),
     ]
     
